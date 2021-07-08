@@ -7,6 +7,47 @@
 1. [Node 14](https://nodejs.org/en/download/) ([nvm](https://github.com/nvm-sh/nvm))
 2. [Yarn](https://classic.yarnpkg.com/en/docs/install/)
 
+### What we check
+
+**US (CCPA)**
+
+1 Load a front
+2 Check ads _do_ load before banner is interacted with
+3 Check the banner shows
+4 Click the button in the banner
+5 (TODO) Check the banner goes away
+6 refresh the page (without clearing cookies)
+7 Check ads have loaded
+8 Load an article page
+9 check ads have loaded
+10 clear cookies. reload the page
+11 Check ads load before banner is interacted with
+12 check the banner shows
+
+**Canada**
+
+Same as US
+
+**Aus**
+
+Same as US, except we use the "Continue" banner button rather "Do not sell my information"
+
+**TCFv2 (Ireland and Canada)**
+
+1 Load a front
+2 Check that _no_ ads load before banner is interacted with
+3 Check the banner shows
+4 Click on "yes I'm happy" in the banner
+5 (TODO) Check the banner goes away
+6 Check that ads load.
+7 refresh the page (without clearing cookies)
+8 Check ads have loaded, and no banner is shown.
+9 Load an article page
+10 check ads have loaded, and (TODO) no banner is shown.
+11 Clear cookies. reload the page
+12 (TODO) Check that _no_ ads load before banner is interacted with
+13 Check the banner shows
+
 ### Manual Update
 
 There are currently 4 canary tests running that check the CMP is loaded successfully and ads are loaded at the right time in US, Canada, AUS and UK respectively.
